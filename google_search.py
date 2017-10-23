@@ -11,12 +11,12 @@ class GoogleSearch:
         self.all_query_url = []
 
         self.page_num = page_num
-        self.query = 'keyword'
-        self.query_url = 'http://www.google.co.jp/search?hl=jp&num=' + str(self.page_num) + '&q=' + self.query
+        self.query = ''
+        self.query_url = ''
 
     def search(self, query='keyword'):
-        self.query_url = 'http://www.google.co.jp/search?hl=jp&num=' + str(self.page_num) + '&q=' + self.query
         self.query = query
+        self.query_url = 'http://www.google.co.jp/search?hl=jp&num=' + str(self.page_num) + '&q=' + self.query
         self.all_query.append(self.query)
         self.all_query_url.append(self.query_url)
 
@@ -35,6 +35,9 @@ class GoogleSearch:
         print()
         print('検索キーワードは', len(self.all_query), '件')
         [print('「', x, '」', end='') for x in self.all_query]
+
+    def get_articles(self):
+        return self.articles
 
 
 if __name__ == '__main__':
