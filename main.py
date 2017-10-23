@@ -1,9 +1,10 @@
 # coding: utf-8
 
-import GoogleSearch
+from google_search import GoogleSearch
 
-gs = GoogleSearch(query='機械学習')
-
-gs.search()
+gs = GoogleSearch()
+gs.search('ウェアラブル')
+gs.search('AI')
+gs.search('Python')
 gs.view()
 

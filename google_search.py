@@ -2,6 +2,7 @@
 from pyquery import PyQuery as pq
 import requests
 
+
 class GoogleSearch:
     def __init__(self, page_num=100):
         self.headers = {'User-Agent': 'Mozilla/5.0'}
@@ -34,6 +35,7 @@ class GoogleSearch:
         print()
         print('検索キーワードは', len(self.all_query), '件')
         [print('「', x, '」', end='') for x in self.all_query]
+
 
 if __name__ == '__main__':
     gs = GoogleSearch()
