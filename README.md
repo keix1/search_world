@@ -1,2 +1,2 @@
 # search_world
-web scraping tool
+world scraping tool
