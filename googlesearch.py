@@ -57,7 +57,12 @@ class GoogleSearch:
         [print('「', x, '」', end='') for x in self.all_query]
 
     def get_articles(self):
-        return self.articles
+        accessible_articles = []
+        for article in self.articles:
+            url = article[1]
+            accessible_articles.append([article[0], url[:url.rfind('&sa=')]])
+        return accessible_articles 
+        # return self.articles 
 
 
 if __name__ == '__main__':
